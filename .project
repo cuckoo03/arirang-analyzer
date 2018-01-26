@@ -24,12 +24,12 @@
 		<link>
 			<name>java</name>
 			<type>2</type>
-			<location>/Users/isumyeong/Documents/eclipsWorks/workspace/arirang.morph/src/main/java</location>
+			<location>C:/Users/isumyeong/Documents/eclipsWorks/workspace/arirang.morph/src/main/java</location>
 		</link>
 		<link>
 			<name>resources</name>
 			<type>2</type>
-			<location>/Users/isumyeong/Documents/eclipsWorks/workspace/arirang.morph/src/main/resources</location>
+			<location>C:/Users/isumyeong/Documents/eclipsWorks/workspace/arirang.morph/src/main/resources</location>
 		</link>
 	</linkedResources>
 </projectDescription>
