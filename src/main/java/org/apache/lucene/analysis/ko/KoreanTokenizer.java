@@ -32,6 +32,7 @@ import org.apache.lucene.analysis.tokenattributes.PositionIncrementAttribute;
 import org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute;
 import org.apache.lucene.analysis.tokenattributes.TypeAttribute;
 import org.apache.lucene.analysis.util.CharacterUtils;
+import org.apache.lucene.util.AttributeFactory;
 import org.apache.lucene.util.Version;
 
 public final class KoreanTokenizer extends Tokenizer {
