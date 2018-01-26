@@ -66,14 +66,14 @@ public class KoreanAnalyzer extends StopwordAnalyzerBase {
   }
     
   public KoreanAnalyzer() {
-    this(Version.LUCENE_46, STOP_WORDS_SET);
+    this(Version.LUCENE_4_10_0, STOP_WORDS_SET);
   }
 
   /**
    * ��������� ������ ���������������
    */
   public KoreanAnalyzer(boolean exactMatch) {
-    this(Version.LUCENE_46, STOP_WORDS_SET);
+    this(Version.LUCENE_4_10_0, STOP_WORDS_SET);
     this.exactMatch = exactMatch;
   }
   
@@ -105,13 +105,13 @@ public class KoreanAnalyzer extends StopwordAnalyzerBase {
   protected TokenStreamComponents createComponents(final String fieldName, final Reader reader) {
     final KoreanTokenizer src = new KoreanTokenizer(reader);
 //    src.setMaxTokenLength(maxTokenLength);
-    TokenStream tok = new LowerCaseFilter(matchVersion, src);
+    TokenStream tok = new LowerCaseFilter(Version.LUCENE_4_10_0, src);
     tok = new ClassicFilter(tok);
     tok = new KoreanFilter(tok, bigrammable, hasOrigin, exactMatch, originCNoun, queryMode);
     if(wordSegment) tok = new WordSegmentFilter(tok, hasOrigin);
     tok = new HanjaMappingFilter(tok);
     tok = new PunctuationDelimitFilter(tok);
-    tok = new StopFilter(matchVersion, tok, stopwords);
+    tok = new StopFilter(Version.LUCENE_4_10_0, tok, stopwords);
     return new TokenStreamComponents(src, tok) {
       @Override
       protected void setReader(final Reader reader) throws IOException {
